@@ -19,7 +19,7 @@ pipeline {
     post {
         always {
             publishHTML([
-                reportDir: 'target/site/srenity', // Carpeta donde está el reporte
+                reportDir: 'target/site/serenity', // Carpeta donde está el reporte
                 reportFiles: 'index.html', // Archivo HTML principal
                 reportName: 'Reporte de Pruebas',
                 keepAll: true, // Mantener reportes de builds anteriores
