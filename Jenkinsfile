@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-        maven 'Maven 3.9.9' // Configura la versión de Maven instalada en Jenkins
-        jdk 'JDK 17' // Configura la versión de JDK instalada
+        maven 'M2_HOME' // Configura la versión de Maven instalada en Jenkins
+        jdk 'JDK-17' // Configura la versión de JDK instalada
     }
     stages {
         stage('Checkout') {
