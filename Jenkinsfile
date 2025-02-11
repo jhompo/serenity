@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', 'https://github.com/jhompo/serenity.git'
+                git branch: 'main', url: 'https://github.com/jhompo/serenity.git'
             }
         }
         stage('Check Java Version') {
