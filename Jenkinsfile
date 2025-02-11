@@ -19,9 +19,12 @@ pipeline {
     post {
         always {
             publishHTML([
-                reportDir: 'target/site/serenity',
-                reportFiles: 'index.html',
-                reportName: 'Serenity Test Report'
+                reportDir: 'target/site/srenity', // Carpeta donde está el reporte
+                reportFiles: 'index.html', // Archivo HTML principal
+                reportName: 'Reporte de Pruebas',
+                keepAll: true, // Mantener reportes de builds anteriores
+                alwaysLinkToLastBuild: true, // Enlace al último reporte generado
+                allowMissing: false // Falla si no encuentra el archivo
             ])
         }
     }
