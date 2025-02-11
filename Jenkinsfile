@@ -4,6 +4,13 @@ pipeline {
         maven 'M2_HOME' // Configura la versión de Maven instalada en Jenkins
         jdk 'JDK-17' // Configura la versión de JDK instalada
     }
+
+    environment {
+        JAVA_HOME = '/opt/java/openjdk'
+        PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
+        WORKSPACE = pwd()
+    }
+
     stages {
         stage('Checkout') {
             steps {
