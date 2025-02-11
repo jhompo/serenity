@@ -8,13 +8,18 @@ pipeline {
     environment {
         JAVA_HOME = '/opt/java/openjdk'
         PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
-        WORKSPACE = pwd()
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/jhompo/serenity.git'
+                git branch: 'main', 'https://github.com/jhompo/serenity.git'
+            }
+        }
+        stage('Check Java Version') {
+            steps {
+                sh 'echo $JAVA_HOME'
+                sh 'java -version'
             }
         }
         stage('Build & Test') {
