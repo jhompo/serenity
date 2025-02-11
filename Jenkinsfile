@@ -1,13 +1,13 @@
 pipeline {
     agent any
     tools {
-        maven 'Maven 3.8.1' // Configura la versión de Maven instalada en Jenkins
-        jdk 'JDK 11' // Configura la versión de JDK instalada
+        maven 'Maven 3.9.9' // Configura la versión de Maven instalada en Jenkins
+        jdk 'JDK 17' // Configura la versión de JDK instalada
     }
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/tu-repositorio/my-serenity-project.git'
+                git 'https://github.com/jhompo/serenity.git'
             }
         }
         stage('Build & Test') {
