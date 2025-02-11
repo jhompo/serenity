@@ -18,16 +18,14 @@ pipeline {
     }
     post {
         always {
-            node {
-                publishHTML(target: [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: 'serenity',
-                    reportFiles: 'index.html',
-                    reportName: 'Serenity Report'
-                ])
-            }
+            publishHTML(target: [
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'serenity',
+                reportFiles: 'index.html',
+                reportName: 'Serenity Report'
+            ])
         }
     }
 }
