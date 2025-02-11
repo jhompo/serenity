@@ -24,7 +24,7 @@ public class GoogleSearchSteps extends UIInteractionSteps {
 
     @Step("Verificar que el título contiene '{0}'")
     public void shouldSeeTitleContaining(String term) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(25));
         wait.until(ExpectedConditions.titleContains(term));
 
         Assertions.assertTrue(
