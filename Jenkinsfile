@@ -28,16 +28,16 @@ pipeline {
             }
         }
     }
-//     post {
-//         always {
-//             publishHTML(target: [
-//                 allowMissing: false,
-//                 alwaysLinkToLastBuild: true,
-//                 keepAll: true,
-//                 reportDir: 'serenity',
-//                 reportFiles: 'index.html',
-//                 reportName: 'Serenity Report'
-//             ])
-//         }
-//     }
+    post {
+        always {
+            publishHTML(target: [
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'serenity',
+                reportFiles: 'index.html',
+                reportName: 'Serenity Report'
+            ])
+        }
+    }
 }
